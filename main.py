@@ -16,7 +16,7 @@ class OilApp(App):
 
         response = requests.get(url=url, headers=headers)
         data = response.json()
-        return Label(text='current oil price: \n' + str(data["data"]["formatted"]))
+        return Label(text=f'current oil price: {str(data["data"]["formatted"])}')
 
 
 if __name__ == '__main__':
