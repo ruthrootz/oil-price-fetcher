@@ -13,7 +13,6 @@ class OilApp(App):
             'Authorization': 'Token b7ed054ba6e6d513af611db4e0b0e7f2',
             'Content-Type': 'application/json'
         }
-
         response = requests.get(url=url, headers=headers)
         data = response.json()
         return Label(text=f'current oil price: {str(data["data"]["formatted"])}')
